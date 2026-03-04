@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - FlexStart{% endblock %}
+
+{% block body_class %}blog-page{% endblock %}
+
+{% block content %}
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="current">Blog</li>
+          </ol>
+        </nav>
+        <h1>Blog</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-8">
+
+          <!-- Blog Posts Section -->
+          <section id="posts" class="posts">
+            <div class="post-item position-relative h-100">
+
+              <div class="post-img">
+                <img src="{{ url_for('static', filename='img/blog/blog-1.jpg') }}" alt="" class="img-fluid">
+              </div>
+
+              <div class="meta" data-aos="fade" data-aos-delay="100">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
+                </div>
+                <time datetime="2020-01-01">Dec 12, 2024</time>
+              </div>
+
+              <div class="content">
+                <h3><a href="{{ url_for('blog_details') }}" class="stretched-link">Eum ad dolor et. Autem aut fugiat debitis voluptatem</a></h3>
+                <p>
+                  Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.
+                </p>
+              </div>
+
+            </div>
+
+          </section><!-- /Blog Posts Section -->
+
+        </div>
+
+        <div class="col-lg-4 sidebar">
+
+          <div class="widgets-container">
+
+            <div class="search-widget widget-item">
+
+              <h3 class="widget-title">Search</h3>
+              <form action="" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search__no-button" role="search">
+                <input type="search" id="wp-block-search__input-1" class="wp-block-searchfield" name="s" value="" placeholder="Search…" required="">
+                <button type="submit" id="wp-block-search__button-1" class="wp-block-search__button" >Search</button>
+              </form>
+
+            </div><!--/Search Widget -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+{% endblock %}
